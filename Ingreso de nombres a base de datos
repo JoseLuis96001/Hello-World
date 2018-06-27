@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<meta charset='UTF-8'>
+ <?php 
+
+  $con=mysqli_connect('localhost','root','','crud') or die ('Error ');
+ ?>
+<html>
+ <head>
+ 	<title>CRUD PHP & MYSQL</title>
+ 	<meta charset="UTF-8">
+ </head>
+ <body>
+ 	<form method='POST' action='formulario.php'>
+ 		<label>Nombre:</label>
+ 		<input type='text' name='nombre' placeholder='Escriba su nombre'><br>
+ 		<label>Contraseña:</label>
+ 		<input type='password' name='passw' placeholder='Escriba su contraseña'><br>
+ 		<label>Email:</label>
+ 		<input type='text' name='email' placeholder='Escriba su email'><br>
+ 		<input type='submit' name='insert' value='INSERTAR DATOS'>
+ 	</form>
+
+ 	<?php 
+ 	 if(isset($_POST['insert'])){
+ 	 	$usuario= $_POST['nombre'];
+ 	 	$pass= $_POST['passw'];
+ 	 	$email= $_POST['email'];
+
+ 	 	$insertar="INSERT INTO users (usuario,password,email) VALUES ('$usuario','$pass','$email')";
+
+ 	 	$ejecutar= mysqli_query($con,$insertar);
+
+ 	 	if ($ejecutar) {
+ 	 		echo "<h3>Insertado correctamente";
+ 	 	}
+ 	 }
+
+ 	 ?>
+ 
+ </body>
+</html>

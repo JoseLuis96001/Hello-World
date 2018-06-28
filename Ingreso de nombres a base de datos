@@ -2,11 +2,11 @@
 <meta charset='UTF-8'>
  <?php 
 
-  $con=mysqli_connect('localhost','root','','crud') or die ('Error ');
+  $con=mysqli_connect('localhost','root','','nuevos') or die ('Error ');
  ?>
 <html>
  <head>
- 	<title>CRUD PHP & MYSQL</title>
+ 	<title>PHP & MYSQL</title>
  	<meta charset="UTF-8">
  </head>
  <body>
@@ -34,8 +34,7 @@
  	 		echo "<h3>Insertado correctamente";
  	 	}
  	 }
-
  	 ?>
- 
  </body>
 </html>
+

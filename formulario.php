@@ -2,8 +2,9 @@
 <meta charset='UTF-8'>
 <html lang="en">
  <?php 
-
-  $con=mysqli_connect('localhost','root','','nuevos') or die ('Error ');
+  //$con=mysqli_connect('localhost','root','','nuevos') or die ('Error '); esto era antes
+	include("config.php");
+	session_start();
  ?>
 <html>
  <head>
